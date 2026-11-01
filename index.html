@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodBridge | Share More. Waste Less.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <a class="brand" href="#home"><span class="brand-icon">F</span><span>food<span class="green">bridge</span><small>SHARE MORE. WASTE LESS.</small></span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+  <nav class="nav" id="nav">
+    <a href="#home">Home</a><a href="#how">How it works</a><a href="#donations">Available food</a><a href="#about">About us</a>
+    <a class="nav-login" href="#login">Login</a><a class="nav-join" href="#register">Join FoodBridge ↗</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <span class="eyebrow"><i></i> FIGHT FOOD WASTE • FEED COMMUNITIES</span>
+    <h1>Good food deserves<br><span>a better destination.</span></h1>
+    <p>FoodBridge connects restaurants with NGOs so surplus food can reach people who need it instead of going to waste.</p>
+    <div class="hero-buttons"><a class="btn primary" href="#register">Start donating <b>→</b></a><a class="btn secondary" href="#how">Discover how it works</a></div>
+    <div class="hero-caption"><span>✓</span> Every meal shared makes a difference.</div>
+  </div>
+  <div class="hero-visual">
+    <div class="circle circle-back"></div><div class="circle circle-front"></div>
+    <div class="meal-card"><div class="meal-picture">🥗</div><div><strong>Fresh food. New purpose.</strong><small>Rescue • Share • Care</small></div><span class="heart">♥</span></div>
+    <div class="float-card float-top">♻️ &nbsp; Reduce food waste</div>
+    <div class="float-card float-bottom">🤝 &nbsp; Support your community</div>
+    <div class="sparkle">✳</div>
+  </div>
+</section>
+
+<section class="impact-bar">
+  <div><strong>01</strong><span>Restaurants share surplus food</span></div>
+  <div><strong>02</strong><span>NGOs discover donations</span></div>
+  <div><strong>03</strong><span>Communities receive support</span></div>
+</section>
+
+<section class="section" id="how">
+  <div class="section-title"><span class="eyebrow">A SIMPLE WAY TO MAKE AN IMPACT</span><h2>How FoodBridge works</h2><p>Three simple steps turn extra food into an opportunity to help.</p></div>
+  <div class="steps-grid">
+    <article class="step-card"><div class="step-icon">🍲</div><span class="step-number">01</span><h3>Restaurants donate</h3><p>Food donors list safe surplus food with quantity, collection deadline and pickup details.</p></article>
+    <article class="step-card"><div class="step-icon">🔎</div><span class="step-number">02</span><h3>NGOs discover</h3><p>Registered NGOs browse available donations and find food they can collect for their communities.</p></article>
+    <article class="step-card"><div class="step-icon">💚</div><span class="step-number">03</span><h3>Food reaches people</h3><p>Donations are collected and distributed, helping reduce waste and support people in need.</p></article>
+  </div>
+</section>
+
+<section class="donations-section" id="donations">
+  <div class="section-title left-title"><span class="eyebrow">MADE AVAILABLE TO SHARE</span><h2>Explore food donations</h2><p>A preview of the kind of food listings available on FoodBridge.</p></div>
+  <div class="donation-grid">
+    <article class="food-listing"><div class="listing-image rice">🍛<span>AVAILABLE</span></div><div class="listing-body"><div class="listing-type">COOKED MEALS</div><h3>Fresh vegetable rice meals</h3><p>🏪 Green Leaf Restaurant</p><div class="listing-bottom"><span>🍽 25 plates</span><span>📍 Sion, Mumbai</span></div></div></article>
+    <article class="food-listing"><div class="listing-image bakery">🥐<span>AVAILABLE</span></div><div class="listing-body"><div class="listing-type">BAKERY</div><h3>Fresh bread and rolls</h3><p>🏪 Daily Crust Bakery</p><div class="listing-bottom"><span>📦 18 packets</span><span>📍 Matunga, Mumbai</span></div></div></article>
+    <article class="food-listing"><div class="listing-image fruit">🍎<span>AVAILABLE</span></div><div class="listing-body"><div class="listing-type">FRUITS</div><h3>Seasonal fresh fruits</h3><p>🏪 Nature Basket Store</p><div class="listing-bottom"><span>⚖ 12 kg</span><span>📍 Dadar, Mumbai</span></div></div></article>
+  </div>
+  <p class="demo-note">Sample interface content for demonstration. Live donation listings will be connected to the database later.</p>
+</section>
+
+<section class="join-banner" id="about">
+  <div><span class="eyebrow">SMALL ACTIONS. BIGGER IMPACT.</span><h2>Be part of a community<br>that cares.</h2><p>Join restaurants and NGOs working together for a better tomorrow.</p></div>
+  <a href="#register" class="btn white-btn">Join FoodBridge ↗</a>
+  <div class="banner-leaf">✳</div>
+</section>
+
+<section class="section account-section" id="register">
+  <div class="section-title"><span class="eyebrow">GET STARTED TODAY</span><h2>Choose how you want to help</h2><p>This is a visual preview of the account entry points.</p></div>
+  <div class="account-grid">
+    <div class="account-card"><div class="account-icon">🍽️</div><h3>I'm a Restaurant</h3><p>Share surplus food and help it reach people who need it.</p><a href="#login">Continue as restaurant →</a></div>
+    <div class="account-card"><div class="account-icon">🤝</div><h3>I'm an NGO</h3><p>Discover available food donations for your community.</p><a href="#login">Continue as NGO →</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <a class="brand footer-brand" href="#home"><span class="brand-icon">F</span><span>food<span class="green">bridge</span><small>SHARE MORE. WASTE LESS.</small></span></a>
+  <p>Connecting surplus food with communities that need it.</p>
+  <span>© Parthpadyar 19036.</span>
+</footer>
+
+<div class="toast" id="toast" role="status">This is a frontend preview. Backend functionality will be added later.</div>
+<script src="js/script.js"></script>
+</body>
+</html>
