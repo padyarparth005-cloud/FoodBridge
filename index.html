@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +8,120 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fbfcf9;color:#203229;font-family:"DM Sans",sans-serif}
+a{text-decoration:none;color:inherit}
+.green{color:#28764f}
+.header{height:82px;padding:0 max(calc((100% - 1160px)/2),5%);display:flex;align-items:center;justify-content:space-between;background:#fff;border-bottom:1px solid #e8eee9;position:sticky;top:0;z-index:20}
+.brand{display:flex;align-items:center;gap:10px;font:800 21px Manrope,sans-serif;letter-spacing:-1px}
+.brand-icon{width:39px;height:39px;border-radius:13px;background:#28764f;color:#fff;display:grid;place-items:center;font-size:22px}
+.brand small{display:block;font:700 8px "DM Sans",sans-serif;letter-spacing:1.6px;color:#8a978e;margin-top:1px}
+.nav{display:flex;align-items:center;gap:27px;font-size:12px;font-weight:700;color:#5e6e63}
+.nav a:hover{color:#28764f}
+.nav-login{padding:11px 16px;border:1px solid #d9e5dc;border-radius:7px}
+.nav-join{background:#28764f;color:white!important;padding:12px 17px;border-radius:7px}
+.menu-toggle{display:none;border:0;background:none;font-size:24px;color:#28764f}
+.hero{max-width:1160px;margin:auto;padding:78px 24px 70px;min-height:530px;display:grid;grid-template-columns:1.05fr .95fr;gap:35px;align-items:center}
+.eyebrow{font-size:9px;font-weight:800;letter-spacing:1.8px;color:#28764f}
+.eyebrow i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#76b98b;margin-right:7px}
+.hero h1{font:800 clamp(42px,5vw,62px)/1.1 Manrope,sans-serif;letter-spacing:-2.5px;margin:19px 0;color:#20372a}
+.hero h1 span{color:#28764f}
+.hero-copy>p{font-size:14px;line-height:1.85;color:#78867d;max-width:480px}
+.hero-buttons{display:flex;gap:12px;margin-top:27px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:16px;justify-content:center;padding:14px 19px;border-radius:8px;font-size:12px;font-weight:700;transition:.2s}
+.primary{background:#28764f;color:white}
+.primary:hover,.nav-join:hover{background:#174d34}
+.secondary{background:white;border:1px solid #d8e3da;color:#28764f}
+.hero-caption{font-size:11px;color:#849087;margin-top:24px}
+.hero-caption span{color:#28764f;font-weight:900;margin-right:7px}
+.hero-visual{height:355px;position:relative;display:grid;place-items:center}
+.circle{position:absolute;border-radius:50%}
+.circle-back{width:315px;height:315px;background:#e7f2e8}
+.circle-front{width:240px;height:240px;border:1px solid #c9dfce}
+.meal-card{z-index:2;background:#fff;border:1px solid #edf1ed;border-radius:17px;padding:20px;display:flex;align-items:center;gap:13px;box-shadow:0 18px 55px #254d341c;width:300px}
+.meal-picture{height:57px;width:57px;border-radius:14px;background:#f0f6ed;display:grid;place-items:center;font-size:29px}
+.meal-card strong{font:800 12px Manrope}
+.meal-card small{display:block;color:#8a968e;font-size:10px;margin-top:5px}
+.heart{color:#e68b7b;margin-left:auto;font-size:20px}
+.float-card{position:absolute;background:#fff;border:1px solid #e8eee9;box-shadow:0 8px 25px #254d3410;padding:12px 15px;border-radius:9px;font-size:10px;font-weight:700;z-index:3}
+.float-top{right:0;top:35px}
+.float-bottom{left:0;bottom:31px}
+.sparkle{position:absolute;right:48px;bottom:45px;color:#86b992;font-size:35px}
+.impact-bar{background:#edf5ee;padding:24px max(calc((100% - 1080px)/2),5%);display:flex;justify-content:space-between;gap:18px}
+.impact-bar div{display:flex;align-items:center;gap:13px}
+.impact-bar strong{font:800 20px Manrope;color:#28764f}
+.impact-bar span{font-size:11px;color:#65746a}
+.section{max-width:1160px;margin:auto;padding:78px 24px}
+.section-title{text-align:center}
+.section-title h2{font:800 32px Manrope;letter-spacing:-1px;margin:12px 0 8px}
+.section-title p{font-size:13px;color:#829087;margin:0}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.step-card{background:white;border:1px solid #e8eee9;border-radius:13px;padding:25px;position:relative}
+.step-icon{width:52px;height:52px;border-radius:14px;background:#edf6ee;display:grid;place-items:center;font-size:25px}
+.step-number{position:absolute;right:24px;top:25px;color:#d5e4d8;font:800 22px Manrope}
+.step-card h3{font:800 16px Manrope;margin:20px 0 8px}
+.step-card p{font-size:12px;line-height:1.75;color:#829087;margin:0}
+.donations-section{background:#f2f7f2;padding:70px max(calc((100% - 1110px)/2),5%)}
+.left-title{text-align:left}
+.donation-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.food-listing{background:white;border:1px solid #e4ece5;border-radius:13px;overflow:hidden}
+.listing-image{height:145px;display:grid;place-items:center;font-size:58px;position:relative}
+.listing-image span{position:absolute;top:13px;left:13px;font-size:8px;font-weight:800;letter-spacing:.8px;background:#fff;padding:6px 9px;border-radius:20px;color:#28764f}
+.rice{background:#f3eadb}
+.bakery{background:#f6eadf}
+.fruit{background:#e9f1df}
+.listing-body{padding:18px}
+.listing-type{font-size:8px;letter-spacing:1.3px;font-weight:800;color:#28764f}
+.listing-body h3{font:800 14px Manrope;margin:8px 0}
+.listing-body p{font-size:11px;color:#829087}
+.listing-bottom{border-top:1px solid #edf1ed;padding-top:12px;margin-top:14px;display:flex;justify-content:space-between;gap:5px;font-size:9px;color:#66756b}
+.demo-note{font-size:10px;color:#89958d;margin-top:17px}
+.join-banner{background:#194f36;color:white;padding:43px max(calc((100% - 1110px)/2),5%);display:flex;justify-content:space-between;align-items:center;gap:25px;position:relative;overflow:hidden}
+.join-banner .eyebrow{color:#b8d9c2}
+.join-banner h2{font:800 28px/1.25 Manrope;margin:10px 0}
+.join-banner p{font-size:12px;color:#d1e2d5}
+.white-btn{background:#fff;color:#28764f;white-space:nowrap}
+.banner-leaf{position:absolute;right:30%;font-size:130px;color:#ffffff0c;pointer-events:none}
+.account-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:760px;margin:32px auto 0}
+.account-card{background:white;border:1px solid #e5ece6;border-radius:13px;padding:25px;text-align:center}
+.account-icon{font-size:31px}
+.account-card h3{font:800 16px Manrope;margin:12px 0 7px}
+.account-card p{font-size:11px;color:#829087;line-height:1.6}
+.account-card a{font-size:11px;font-weight:800;color:#28764f}
+.footer{background:white;border-top:1px solid #e8eee9;text-align:center;padding:30px 15px;color:#87938b;font-size:10px}
+.footer-brand{justify-content:center;color:#203229}
+.footer p{margin:13px 0 7px}
+.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);background:#20372a;color:white;padding:12px 17px;border-radius:8px;font-size:11px;opacity:0;pointer-events:none;transition:.25s;z-index:50;max-width:90%;text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media(max-width:760px){
+.header{height:72px;padding:0 5%}
+.menu-toggle{display:block}
+.nav{display:none;position:absolute;top:71px;left:0;right:0;background:white;padding:20px 5%;border-bottom:1px solid #e8eee9;flex-direction:column;align-items:stretch;gap:17px}
+.nav.open{display:flex}
+.nav a{text-align:center}
+.hero{grid-template-columns:1fr;padding-top:55px}
+.hero h1{font-size:43px}
+.hero-visual{height:300px}
+.circle-back{width:270px;height:270px}
+.circle-front{width:205px;height:205px}
+.float-top{right:0}
+.float-bottom{left:0}
+.impact-bar{flex-wrap:wrap}
+.impact-bar div{width:45%}
+.steps-grid,.donation-grid{grid-template-columns:1fr}
+.donations-section{padding:55px 6%}
+.join-banner{align-items:flex-start;flex-direction:column;padding:38px 6%}
+.join-banner h2{font-size:25px}
+.account-grid{grid-template-columns:1fr}
+.section{padding:58px 20px}
+}
+</style>
 </head>
+
 <body>
 <header class="header">
   <a class="brand" href="#home"><span class="brand-icon">F</span><span>food<span class="green">bridge</span><small>SHARE MORE. WASTE LESS.</small></span></a>
@@ -84,6 +197,22 @@
 </footer>
 
 <div class="toast" id="toast" role="status">This is a frontend preview. Backend functionality will be added later.</div>
-<script src="js/script.js"></script>
+
+<script>
+const menuToggle = document.getElementById("menuToggle");
+const nav = document.getElementById("nav");
+
+menuToggle.addEventListener("click", function() {
+  nav.classList.toggle("open");
+});
+
+nav.querySelectorAll("a").forEach(function(link) {
+  link.addEventListener("click", function() {
+    nav.classList.remove("open");
+  });
+});
+</script>
 </body>
-</html>
+  </html>
+
+  
